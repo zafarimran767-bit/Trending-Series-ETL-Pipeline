@@ -13,8 +13,11 @@ services:
 
   airflow-webserver:
     image: apache/airflow:2.7.2
+    env_file:
+    - .env
     depends_on:
       - postgres
+     
 
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -45,8 +48,13 @@ services:
 
   airflow-scheduler:
     image: apache/airflow:2.7.2
+   
+    env_file:
+    - .env
+
     depends_on:
       - airflow-webserver
+      
 
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor

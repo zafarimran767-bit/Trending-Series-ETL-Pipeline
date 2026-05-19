@@ -3,7 +3,7 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 with DAG(
-    dag_id="netflix_etl_pipeline",
+    dag_id="Trending_Series_ETL_Pipeline",
     start_date=datetime(2024, 1, 1),
     schedule="@daily",
     catchup=False

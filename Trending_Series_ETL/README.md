@@ -200,7 +200,7 @@ Password: admin
 
 ### 5. Trigger the DAG
 
-Run the `netflix_etl_pipeline` DAG from the Airflow UI.
+Run the `Trending_Series_ETL_Pipeline` DAG from the Airflow UI.
 
 ---
 
@@ -233,6 +233,9 @@ This project helped demonstrate practical understanding of:
 - Handling Airflow task dependencies and debugging
 
 ---
+## Screens
+
+![Airflow DAG](screenshots/dag.png)
 
 ## Author
 

@@ -1,17 +1,18 @@
 import pandas as pd
+import os
 from sqlalchemy import create_engine
 
 # Load cleaned data
 df = pd.read_csv("/opt/airflow/data/processed/trending_series_clean.csv")
 # Database connection
-username = "postgres"
-password = "zafar"
-host = "host.docker.internal"
-port = "5432"
-database = "Trending_Series_db"
+user = os.getenv("POSTGRES_USER")
+password = os.getenv("POSTGRES_PASSWORD")
+host = os.getenv("POSTGRES_HOST")
+port = os.getenv("POSTGRES_PORT")
+db = os.getenv("POSTGRES_DB")
 
 engine = create_engine(
-    "postgresql+psycopg2://airflow:airflow@postgres:5432/airflow"
+    f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}"
 )
 
 # Load data into SQL table
