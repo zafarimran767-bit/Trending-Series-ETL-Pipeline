@@ -1,4 +1,4 @@
-# Netflix Trending Series ETL Pipeline
+# Trending Series ETL Pipeline
 
 ## Overview
 
@@ -46,7 +46,7 @@ The workflow is orchestrated using Apache Airflow and runs inside Docker contain
 ## Project Structure
 
 ```text
-Netflix_ETL/
+Trending_Series_ETL/
 │
 ├── dags/
 │   └── trending_series_etl_dag.py
